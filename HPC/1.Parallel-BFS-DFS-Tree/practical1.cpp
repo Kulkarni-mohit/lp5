@@ -34,7 +34,6 @@ public:
 		
 		#pragma omp parallel for
 		for(size_t i=0; i<node->children.size() ; ++i)
-            #pragma omp critical
 			parallelDFS(node->children[i]);
 	}
 
